@@ -1,4 +1,3 @@
-#!/bin/bash
 # GSP318 - Deploy to Kubernetes: Challenge Lab
 # Run in Cloud Shell. Edit the 4 lines below to match your lab panel, then paste.
 
