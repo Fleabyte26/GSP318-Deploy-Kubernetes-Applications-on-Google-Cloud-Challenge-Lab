@@ -12,6 +12,7 @@ export PROJECT_ID=$(gcloud config get-value project)
 export IMAGE_PATH="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO}/${IMAGE}:${TAG}"
 
 # Task 1 - build the image
+
 source <(gcloud storage cat gs://spls/gsp318/script.sh)
 gcloud storage cp gs://spls/gsp318/valkyrie-app.tgz .
 tar -xzf valkyrie-app.tgz
@@ -24,6 +25,7 @@ RUN go install -v
 ENTRYPOINT ["app","-single=true","-port=8080"]
 EOF
 docker build -t "${IMAGE}:${TAG}" .
+
 # >> Check my progress (Task 1)
 
 # Task 2 - test the image
