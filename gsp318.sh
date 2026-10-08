@@ -14,6 +14,7 @@ export IMAGE_PATH="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO}/${IMAGE}:${TAG
 # Task 1 - build the image
 
 source <(gcloud storage cat gs://spls/gsp318/script.sh)
+
 gcloud storage cp gs://spls/gsp318/valkyrie-app.tgz .
 tar -xzf valkyrie-app.tgz
 cd valkyrie-app
